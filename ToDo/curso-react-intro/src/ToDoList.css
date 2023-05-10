@@ -1,0 +1,10 @@
+.containerToDoList{
+    display: flex;
+    justify-content: center;
+}
+
+.listContent{
+    margin: 2rem 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}

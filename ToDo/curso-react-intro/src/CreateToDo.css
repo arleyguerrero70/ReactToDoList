@@ -1,0 +1,31 @@
+.containerButtonAddToDon{
+    position: relative;
+}
+.buttonAddToDo{
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 60px;
+    max-width: 80px;
+    height: 60px;
+    max-height: 80px;
+    color: #B2CBED;
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+    border: none;
+    border-radius: 77px;
+background: #B2CBED;
+box-shadow:  2px 2px 15px #47515f,
+             -2px -2px 15px #ffffff;
+}
+
+.buttonAddToDo__icon{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.buttonAddToDo__icon img{
+    width: 100%;
+}
+

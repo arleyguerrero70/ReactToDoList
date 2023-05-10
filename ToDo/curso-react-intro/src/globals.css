@@ -1,0 +1,22 @@
+@import url(./import.css);
+@import url(./ToDoSearch.css);
+@import url(./ToDoList.css);
+@import url(./ToDoItem.css);
+@import url(./CreateToDo.css);
+
+:root{
+    --primary:#800;
+}
+
+body{
+    background-color: #38404B;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-family: 'Lobster', cursive;
+}
+input:focus-visible{
+    outline: .1px solid rgba(255, 255, 255, 0.2);
+}
