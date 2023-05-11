@@ -1,16 +1,14 @@
 import React from "react"
 
-function ToDoSearch() {
-    const [searchValue, setSearchValue] = React.useState('');
-
-    console.log('Estás haciendo búsqueda de: ' + searchValue)
-
+function ToDoSearch({
+    searchValue,
+    setSearchValue
+}) {
     return(
         <div className="containerInput">
             <input
                 onChange={
                     (event) => {
-                        console.log('Has escrito en el buscador de To Do')
                         setSearchValue(event.target.value)
                     }
                 }
