@@ -28,6 +28,14 @@ function App() {
 
   const totalToDos = exampleToDo.length;
 
+  const resultSearchToDo = exampleToDo.filter(
+    (todo) =>{
+      const todoText = todo.text.toLowerCase()
+      const todoResult = searchValue.toLowerCase()
+      return todoText.includes(todoResult)
+    }
+  )
+
 
   return (
     <React.Fragment>
@@ -43,7 +51,7 @@ function App() {
       />
 
       <ToDoList>
-        {exampleToDo.map(todo =>(
+        {resultSearchToDo.map(todo =>(
           <ToDoItem
             key={todo.text}
             text={todo.text}
