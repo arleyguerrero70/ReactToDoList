@@ -28,13 +28,32 @@ function App() {
 
   const totalToDos = exampleToDo.length;
 
-  const resultSearchToDo = exampleToDo.filter(
+  const resultSearchToDo = todos.filter(
     (todo) =>{
       const todoText = todo.text.toLowerCase()
       const todoResult = searchValue.toLowerCase()
       return todoText.includes(todoResult)
     }
   )
+
+  const completeTodo = (text) =>{
+    const newTodos = [...todos]
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text
+    )
+    newTodos[todoIndex].completed = true
+    setTodos(newTodos)
+  }
+
+  const deleteTodo = (text) =>{
+    const newTodos = [...todos]
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text
+    )
+    newTodos[todoIndex].completed = false
+    newTodos.splice(todoIndex, 1)
+    setTodos(newTodos)
+  }
 
 
   return (
@@ -56,6 +75,8 @@ function App() {
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            onComplete={ () => completeTodo(todo.text)}
+            onDelete={ () => deleteTodo(todo.text)}
           />
         ))}
       </ToDoList>
